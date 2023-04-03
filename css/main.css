@@ -1,0 +1,63 @@
+@charset 'utf-8';
+
+html {font-family: 'Noto Sans KR', sans-serif; font-size:14px}
+body {overflow-x:hidden; color: rgb(29,29,31); letter-spacing: -0.05em; background: #fff;}
+p {line-height: 1.6;}
+a {color:rgb(29,29,31); text-decoration: none;}
+
+.global-nav {height:44px; padding: 0 1rem; position: absolute; top:0; left: 0; width: 100%; z-index: 10;}
+.global-nav .global-nav-links, .local-nav .local-nav-links {max-width: 1000px; margin:  auto; display: flex; align-items: center; height:100%}
+.global-nav .global-nav-links {justify-content: space-between;}
+
+.local-nav {height: 52px; border-bottom: 1px solid #ddd; padding:0 1rem; position: absolute; top:45px; left: 0; width: 100%; z-index: 11;}
+.local-nav .local-nav-links a {font-size:0.8rem;}
+.local-nav .local-nav-links a:not(.product-name) {margin-left: 2em;}
+.local-nav .local-nav-links .product-name { margin-right: auto; font-size:1.2rem; font-weight:bold}
+
+.local-nav-sticky .local-nav {position: fixed; top:0; background:rgba(255,255,255,0.1); backdrop-filter: saturate(180%) blur(10px);}
+
+.scroll-section {padding-top:50vh; /*border: 3px solid  red;*/}
+.main-message {display: flex; align-items: center; justify-content: center; height: 3em; font-size: 2.5rem;  margin: 5px 0; opacity: 0; top:45vh;}
+.main-message p {line-height: 1.2; font-weight: bold; text-align: center;}
+.main-message small {display: block; font-size:1.2rem; margin-bottom: 0.5em;;}
+#scroll-section-2 .main-message {font-size: 3.5rem;}
+.description {font-size: 1.2rem; color:#888; padding: 0 1rem;}
+.description strong{font-size:3rem; color:rgb(29,29,31); margin-right:0.2em}
+.main-message small {display: block; font-size:1.2rem;margin-bottom: 0.5em;}
+.mid-message {font-size:2rem; color:#888; padding: 0 1rem;}
+.mid-message strong {color:rgb(29,29,31)}
+.canvas-caption {padding: 0 1rem; color:#888; font-size:1.2rem;}
+.pin {width: 0.1px; height: 100px; background: #000;}
+.sticky-elem {position: fixed; left:0; width: 100%; display: none;}
+.sticky-elem-canvas {top:0; height: 100%;}
+.sticky-elem-canvas canvas {position: absolute; left: 50%; top:50%;}
+.desc-message {font-weight: bold; width: 50%; opacity: 0;}
+/* .image-blend-canvas {background: blue;} */
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem { display: block;}
+#scroll-section-0 h1 {font-size:4rem; text-align: center; position: relative; z-index: 5; top:-5vh}
+#scroll-section-2 .main-message {font-size:3.5rem;}
+#scroll-section-2 .main-b {top:10%; left:40%;}
+#scroll-section-2 .main-c {top:15%; left:45%;}
+#scroll-section-3 {display: flex; flex-flow: column; align-items: center;}
+.image-blend-canvas.sticky {position: fixed; top:0; z-index: 10;}
+#scroll-section-3 .canvas-caption {margin : -6em auto 0}
+.scroll-section {position: relative;}
+/* .scroll-section canvas {width: 100%;} */
+.footer {display: flex; justify-content: center; align-items: center; height: 7rem; background: darkorange; color:#fff;}
+
+@media screen and (min-width:1024px) {
+    .mid-message,.canvas-caption, .description  {width: 1000px; margin: 0 auto; padding: 0;}
+    #scroll-section-0 h1  {font-size:9vw;}
+    .main-message {font-size:4vw}
+    .main-message small {font-size:1.5vw;}
+    #scroll-section-2 .main-message {font-size:6vw;}
+    #scroll-section-2 .main-b {top:5%; left:53%;}
+    #scroll-section-2 .main-c {left:55%;}
+    .description {font-size:2rem; }
+    .description strong{font-size:6rem}
+    .desc-message {width: 20%;}
+    .canvas-caption  {font-size: 2rem;}
+}
